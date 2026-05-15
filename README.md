@@ -32,20 +32,20 @@ This repo tests whether query expansion improves retrieval quality compared with
 
 ```mermaid
 flowchart TD
-    A[Raw Technical Documents] --> B[Chunk Ingestion]
-    B --> C[Embedding Model]
-    C --> D[FAISS Vector Store]
+    A["Raw Technical Documents"] --> B["Chunk Ingestion"]
+    B --> C["Embedding Model"]
+    C --> D["FAISS Vector Store"]
 
-    E[User Query] --> F1[Strategy A: Raw Query Embedding]
-    E --> G[Mock Generative Model]
-    G --> H[Expanded Query Variants]
-    H --> F2[Strategy B: Expanded Query Embedding]
+    E["User Query"] --> F1["Strategy A: Raw Query Embedding"]
+    E --> G["Mock Generative Model"]
+    G --> H["Expanded Query Variants"]
+    H --> F2["Strategy B: Expanded Query Embedding"]
 
-    F1 --> I[Top-k Vector Retrieval]
+    F1 --> I["Top-k Vector Retrieval"]
     F2 --> I
 
-    I --> J[Benchmarking]
-    J --> K[MRR@3, Hit@1, Hit@3, P50/P95 Latency]
+    I --> J["Benchmarking"]
+    J --> K["MRR at 3, Hit at 1, Hit at 3, P50/P95 Latency"]
 ```
 
 ---
