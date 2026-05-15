@@ -1,0 +1,183 @@
+{
+  "queries": [
+    {
+      "query": "How does the system handle peak load?",
+      "relevant_chunk_ids": [
+        0,
+        1,
+        5
+      ],
+      "mrr_a": 1.0,
+      "mrr_b": 1.0,
+      "hit_at_1_a": true,
+      "hit_at_1_b": true,
+      "hit_at_3_a": true,
+      "hit_at_3_b": true,
+      "latency_p50_a_ms": 11.27,
+      "latency_p50_b_ms": 22.43,
+      "latency_p95_a_ms": 12.18,
+      "latency_p95_b_ms": 23.64,
+      "top3_chunks_a": [
+        "Load balancing distributes incoming requests across multiple server instances to prevent any single node from becoming a",
+        "Horizontal scaling adds new server instances in response to increased traffic rather than vertically upgrading a single ",
+        "Under memory pressure, the operating system may resort to swapping pages to disk, causing latency spikes of several orde"
+      ],
+      "top3_chunks_b": [
+        "Load balancing distributes incoming requests across multiple server instances to prevent any single node from becoming a",
+        "Horizontal scaling adds new server instances in response to increased traffic rather than vertically upgrading a single ",
+        "Rate limiting enforces an upper bound on how many requests a client or service can make within a time window, protecting"
+      ],
+      "top3_scores_a": [
+        0.587,
+        0.4206,
+        0.4044
+      ],
+      "top3_scores_b": [
+        0.7526,
+        0.6856,
+        0.6429
+      ],
+      "rewrites_b": [
+        "How does a load balancer distribute requests across server instances to prevent bottlenecks during traffic spikes?",
+        "How does autoscaling provision new instances in response to high CPU utilisation and request volume?",
+        "What rate limiting mechanisms use token-bucket or sliding-window algorithms to protect backends from overload?"
+      ]
+    },
+    {
+      "query": "What caching strategies improve latency under high read volume?",
+      "relevant_chunk_ids": [
+        2,
+        3,
+        7
+      ],
+      "mrr_a": 1.0,
+      "mrr_b": 1.0,
+      "hit_at_1_a": true,
+      "hit_at_1_b": true,
+      "hit_at_3_a": true,
+      "hit_at_3_b": true,
+      "latency_p50_a_ms": 10.89,
+      "latency_p50_b_ms": 26.11,
+      "latency_p95_a_ms": 11.6,
+      "latency_p95_b_ms": 28.71,
+      "top3_chunks_a": [
+        "In-memory caching with systems such as Redis or Memcached stores frequently accessed data in RAM, reducing the number of",
+        "Under memory pressure, the operating system may resort to swapping pages to disk, causing latency spikes of several orde",
+        "Content delivery networks cache static and semi-static assets at edge nodes geographically close to end users, reducing "
+      ],
+      "top3_chunks_b": [
+        "In-memory caching with systems such as Redis or Memcached stores frequently accessed data in RAM, reducing the number of",
+        "Content delivery networks cache static and semi-static assets at edge nodes geographically close to end users, reducing ",
+        "Under memory pressure, the operating system may resort to swapping pages to disk, causing latency spikes of several orde"
+      ],
+      "top3_scores_a": [
+        0.6196,
+        0.5015,
+        0.4736
+      ],
+      "top3_scores_b": [
+        0.7845,
+        0.6732,
+        0.5754
+      ],
+      "rewrites_b": [
+        "How does Redis or Memcached store frequently accessed data in RAM to reduce database round-trips and improve read latency?",
+        "How do CDN edge nodes cache static assets geographically close to users to reduce origin-server load?",
+        "What write-through or cache-aside strategies synchronise cached data with the primary datastore?"
+      ]
+    },
+    {
+      "query": "How is database performance maintained during traffic spikes?",
+      "relevant_chunk_ids": [
+        0,
+        4,
+        9
+      ],
+      "mrr_a": 0.5,
+      "mrr_b": 1.0,
+      "hit_at_1_a": false,
+      "hit_at_1_b": true,
+      "hit_at_3_a": true,
+      "hit_at_3_b": true,
+      "latency_p50_a_ms": 12.72,
+      "latency_p50_b_ms": 24.53,
+      "latency_p95_a_ms": 14.04,
+      "latency_p95_b_ms": 27.39,
+      "top3_chunks_a": [
+        "In-memory caching with systems such as Redis or Memcached stores frequently accessed data in RAM, reducing the number of",
+        "Database connection pooling maintains a pool of pre-established connections that incoming requests can borrow rather tha",
+        "Under memory pressure, the operating system may resort to swapping pages to disk, causing latency spikes of several orde"
+      ],
+      "top3_chunks_b": [
+        "Database connection pooling maintains a pool of pre-established connections that incoming requests can borrow rather tha",
+        "Load balancing distributes incoming requests across multiple server instances to prevent any single node from becoming a",
+        "In-memory caching with systems such as Redis or Memcached stores frequently accessed data in RAM, reducing the number of"
+      ],
+      "top3_scores_a": [
+        0.5531,
+        0.5108,
+        0.4974
+      ],
+      "top3_scores_b": [
+        0.7435,
+        0.5914,
+        0.5285
+      ],
+      "rewrites_b": [
+        "How does connection pooling maintain pre-established database connections to reduce per-query latency and prevent exhaustion?",
+        "How does load balancing prevent database overload by distributing upstream request traffic?",
+        "How does monitoring P95 query latency and error rate detect database performance regressions early?"
+      ]
+    },
+    {
+      "query": "How does the system prevent cascading failures under partial outages?",
+      "relevant_chunk_ids": [
+        3,
+        5,
+        6
+      ],
+      "mrr_a": 1.0,
+      "mrr_b": 1.0,
+      "hit_at_1_a": true,
+      "hit_at_1_b": true,
+      "hit_at_3_a": true,
+      "hit_at_3_b": true,
+      "latency_p50_a_ms": 11.92,
+      "latency_p50_b_ms": 23.04,
+      "latency_p95_a_ms": 12.72,
+      "latency_p95_b_ms": 25.05,
+      "top3_chunks_a": [
+        "The circuit-breaker pattern prevents cascading failures in distributed systems by temporarily halting requests to an unr",
+        "Asynchronous processing decouples producers from consumers by introducing a message queue such as Kafka or Cloud Pub/Sub",
+        "Load balancing distributes incoming requests across multiple server instances to prevent any single node from becoming a"
+      ],
+      "top3_chunks_b": [
+        "The circuit-breaker pattern prevents cascading failures in distributed systems by temporarily halting requests to an unr",
+        "Asynchronous processing decouples producers from consumers by introducing a message queue such as Kafka or Cloud Pub/Sub",
+        "Rate limiting enforces an upper bound on how many requests a client or service can make within a time window, protecting"
+      ],
+      "top3_scores_a": [
+        0.5843,
+        0.3853,
+        0.3469
+      ],
+      "top3_scores_b": [
+        0.6494,
+        0.5212,
+        0.4594
+      ],
+      "rewrites_b": [
+        "How does the circuit-breaker pattern halt requests to a failing downstream service to prevent cascading failures?",
+        "How do message queues like Kafka decouple producers from failing consumers to isolate failure modes?",
+        "How does rate limiting with exponential backoff prevent retry storms from amplifying failures?"
+      ]
+    }
+  ],
+  "mean_mrr_a": 0.875,
+  "mean_mrr_b": 1.0,
+  "mean_hit_at_1_a": 0.75,
+  "mean_hit_at_1_b": 1.0,
+  "mean_hit_at_3_a": 1.0,
+  "mean_hit_at_3_b": 1.0,
+  "strategy_b_mrr_improvement_pct": 14.29
+}
