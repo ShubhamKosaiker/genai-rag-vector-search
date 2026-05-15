@@ -157,22 +157,9 @@ pytest
 
 ## Benchmark summary
 
-The benchmark compares raw vector search against query expansion across four complex technical queries.
+The benchmark compares raw vector search against query-expanded retrieval across four complex technical queries.
 
-| Metric | Strategy A: Raw Vector Search | Strategy B: Query Expansion |
-|---|---:|---:|
-| Mean MRR@3 | 0.2083 | 0.4583 |
-| Mean Hit@1 | 0.00% | 25.00% |
-| Mean Hit@3 | 50.00% | 75.00% |
-| MRR improvement | — | +120.0% |
-
-Full results are available in:
-
-```text
-retrieval_benchmark.md
-benchmark_results.json
-```
-
+Full results, per-query breakdowns, and latency analysis are available in [retrieval_benchmark.md](retrieval_benchmark.md).
 ---
 
 ## Key finding

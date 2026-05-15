@@ -28,8 +28,8 @@
 
 | | P50 (ms) | P95 (ms) |
 |-|----------|----------|
-| Strategy A | 11.27 | 12.18 |
-| Strategy B | 22.43 | 23.64 |
+| Strategy A | 23.28 | 25.54 |
+| Strategy B | 58.81 | 61.34 |
 
 **Strategy B — Query Rewrites Used**
 
@@ -66,8 +66,8 @@
 
 | | P50 (ms) | P95 (ms) |
 |-|----------|----------|
-| Strategy A | 10.89 | 11.60 |
-| Strategy B | 26.11 | 28.71 |
+| Strategy A | 24.42 | 26.65 |
+| Strategy B | 66.77 | 68.58 |
 
 **Strategy B — Query Rewrites Used**
 
@@ -104,8 +104,8 @@
 
 | | P50 (ms) | P95 (ms) |
 |-|----------|----------|
-| Strategy A | 12.72 | 14.04 |
-| Strategy B | 24.53 | 27.39 |
+| Strategy A | 23.19 | 26.43 |
+| Strategy B | 58.26 | 60.13 |
 
 **Strategy B — Query Rewrites Used**
 
@@ -142,8 +142,8 @@
 
 | | P50 (ms) | P95 (ms) |
 |-|----------|----------|
-| Strategy A | 11.92 | 12.72 |
-| Strategy B | 23.04 | 25.05 |
+| Strategy A | 30.08 | 31.21 |
+| Strategy B | 57.75 | 59.69 |
 
 **Strategy B — Query Rewrites Used**
 
